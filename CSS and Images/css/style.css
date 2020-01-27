@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 
+*{
+    margin:0;
+    padding: 0;
+}
+
 html{
     font-family: 'Playfair Display', serif;;
 }
@@ -8,7 +13,7 @@ nav{
     display: flex;
     place-content: space-evenly;
     list-style-type: none;
-    background-color: black;
+    background-color: #FF5A5F;
     height: 6em;
     align-items: center;
     flex-wrap: wrap;
@@ -29,11 +34,12 @@ nav{
 }
 
 .dropdown .dropbtn{
-    background-color:black ;
+    background-color:#FF5A5F ;
     text-decoration: none;
     border: none;
     color: whitesmoke;
     font-size: 1em;
+    font-family: 'Playfair Display';
 }
 
 .logo{
@@ -68,25 +74,13 @@ nav{
     color: gray;
 }
 
-.christmas{
-    color: red;
-    font-weight: 1000;
-    font-style: italic;
-}
-
  .dropbtn:hover{
     color: gray; 
 } 
 
+
 .dropdown-content a:hover{
     background-color: #ddd;
-}
-
-#sort-by{
-    font-weight: 1000;
-    font-size: 1.5em;
-    display: inline-block;
-    margin-right: 2em;
 }
 
 .header a{
@@ -99,6 +93,7 @@ nav{
     border: 1px solid red;
     margin: 2em 2em;
     max-width: 30em;
+    border-radius: 1em;
 }
 
 .booking_form_article{
@@ -122,4 +117,78 @@ nav{
     color: white;
     padding: 0.6em;
     text-shadow: none;
+}
+
+.submit_btn:hover{
+    cursor: pointer;
+    background-color: lightsalmon;
+    color: black;
+}
+
+.tagline-div, .tagline-div h2{
+    margin-bottom: 1em;
+}
+
+#destination{
+    margin-top: 1em;
+}
+
+.check_in, .check_out
+{
+    margin-bottom: 0.5em;
+}
+
+ .check_in_input, .check_out_input{
+    margin-bottom: 1em;
+}
+
+.guest_menu{
+    margin-top: 1em;
+}
+
+/****************** BODY BACKGROUND *******************/
+/* 
+.main-area{
+    background-image: url('../images/Home Background.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+} */
+
+
+/*************MODAL POPUP ******************/
+
+.modal{
+    background-color: rgb(0, 0,0,0.8);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__contents{
+        background-color: white;
+        padding:2rem 4rem;
+    
+}
+
+input[type="email"]{
+    width: 100%;
+    padding: .5em;
+}
+
+.modal_close_bar{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -2rem;
+    margin-top: -1rem;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+.modal_hidden{
+    display: none;
 }

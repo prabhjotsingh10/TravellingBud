@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    {{!-- <link rel="stylesheet" href="/css/reset.css"> --}}
     <title>TravellingBud</title>
 </head>
 <body>
@@ -25,57 +26,90 @@
       <a href="#">User Registration</a>
       <a href="#">Help</a>
       <a href="#">Sign-Up <i class="fas fa-user-circle"></i></a>
-      <a href="#">Login <i class="fas fa-user-circle"></i></a>
+      <a href="#" class="user_login">Login <i class="fas fa-user-circle"></i></a>
     </nav>
    
   </header>
 
-<div class="booking-form">
-  <article class="booking_form_article">
+<article class="main-area">
 
-   <div> 
-   
-     <h2>Book Unique Places to stay and things to do.</h2>
+  <div class="booking-form">
+    <article class="booking_form_article">
 
-     <p>WHERE</p>
-     <select name="destination" id="">
-       <option value="Ontario">Ontario</option>
-       <option value="British Columbia">British Columbia</option>
-       <option value="Saskatchewan">Saskatchewan</option>
-       <option value="Nova Scotia">Nova Scotia</option>
-       <option value="Alberta">Alberta</option>
-     </select>
-   
-   </div>
+     <div class="tagline-div"> 
+     
+       <h2>Book Unique Places to stay and things to do.</h2>
 
-    <div class="container">
+       <h3>WHERE</h3>
+       <select name="destination" id="destination">
+         <option value="Ontario">Ontario</option>
+         <option value="British Columbia">British Columbia</option>
+         <option value="Saskatchewan">Saskatchewan</option>
+         <option value="Nova Scotia">Nova Scotia</option>
+         <option value="Alberta">Alberta</option>
+       </select>
 
-      <div class="check_in_div">
-      <p class="check_in">CHECK-IN</p>
-      <input type="date" name="check-in" class="check_in_input">
+     </div>
+
+      <div class="container">
+
+        <div class="check_in_div">
+        <h3 class="check_in">CHECK-IN</h3>
+        <input type="date" name="check-in" class="check_in_input">
+        </div>
+
+        <div class="check_out_div">
+        <h3 class="check_out">CHECK OUT</h3>
+        <input type="date" name="check-out" class="check_out_input">
+        </div>
+
+      </div>  
+
+      <div class="guests_div">
+      <h3>GUESTS</h3>
+       <select name="guests_menu"  class="guest_menu" aria-placeholder="1 Guest">
+         <option value="Children">Children</option>
+         <option value="Adult">Adult</option>
+         <option value="Senior">Senior</option>
+      </select>  
+
+      <input type="button" value="SUBMIT" class="submit_btn">
+
       </div>
 
-      <div class="check_out_div">
-      <p class="check_out">CHECK OUT</p>
-      <input type="date" name="check-out">
-      </div>
+    </article>
 
-    </div>  
+  </div>
 
-    <div class="guests_div">
-    <p>GUESTS</p>
-     <select name="guests_menu" id="" aria-placeholder="1 Guest">
-       <option value="Children">Children</option>
-       <option value="Adult">Adult</option>
-       <option value="Senior">Senior</option>
-    </select>  
-    
-    <input type="button" value="SUBMIT" class="submit_btn">
+</article>
 
+<div class="modal modal_hidden">
+  <div class="modal__contents">
+    <div class="modal_close_bar">      
+      <span>X</span>
     </div>
-
-  </article>
-  
+    <p>Please Enter your email address to find out more</p>
+    <form id="learn_more">
+      <input type="email" placeholder="Your best email">
+      <button>Submit</button>
+    </form>
+  </div>
 </div>
+
+<script type="text/javascript">
+   const toggleModal= () =>{
+     document.querySelector('.modal').classList.toggle('modal_hidden');
+ }
+
+ document.querySelector(".user_login").addEventListener('click',toggleModal);
+
+ document.querySelector('#learn_more').addEventListener('submit',(event)=>{
+     event.preventDefault();
+     toggleModal();
+ })
+ document.querySelector(".modal_close_bar").addEventListener('click', toggleModal)
+
+</script>
+
 </body>
 </html>
