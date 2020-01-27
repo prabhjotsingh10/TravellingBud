@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+html{
+    font-family: 'Playfair Display', serif;;
+}
+
+nav{
+    display: flex;
+    place-content: space-evenly;
+    list-style-type: none;
+    background-color: black;
+    height: 6em;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dropdown{
+    overflow: hidden;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: lightgray;
+    min-width: 3rem;
+    color:black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown .dropbtn{
+    background-color:black ;
+    text-decoration: none;
+    border: none;
+    color: whitesmoke;
+    font-size: 1em;
+}
+
+.logo{
+    display: inline-block;
+}
+
+.header a, .dropdown{
+    color: whitesmoke;
+    transition: all 0.3s ease-in;
+    font-size: 1.3rem
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: none;
+}
+
+.header a:hover{
+    font-size: 1.1rem;
+    color: gray;
+}
+
+.christmas{
+    color: red;
+    font-weight: 1000;
+    font-style: italic;
+}
+
+ .dropbtn:hover{
+    color: gray; 
+} 
+
+.dropdown-content a:hover{
+    background-color: #ddd;
+}
+
+#sort-by{
+    font-weight: 1000;
+    font-size: 1.5em;
+    display: inline-block;
+    margin-right: 2em;
+}
+
+.header a{
+    text-decoration: none;
+}
+
+/******************* BOOKING FORM **********************/
+
+.booking-form{
+    border: 1px solid red;
+    margin: 2em 2em;
+    max-width: 30em;
+}
+
+.booking_form_article{
+    margin: 2em;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2px;
+}
+
+.submit_btn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    border-radius: 5px;
+    background-color:#FF5A5F;
+    color: white;
+    padding: 0.6em;
+    text-shadow: none;
+}
