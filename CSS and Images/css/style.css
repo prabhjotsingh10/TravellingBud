@@ -172,13 +172,20 @@ nav{
 .modal__contents{
         background-color: white;
         padding:2rem 4rem;
-    
+        
 }
 
 input[type="email"]{
-    width: 100%;
-    padding: .5em;
+    width: 93%;
+    padding: 1em;
+    margin-bottom: 1em;
 }
+
+input[type="password"]{
+    width: 93%;
+    padding: 1em;
+}
+
 
 .modal_close_bar{
     display: flex;
@@ -191,4 +198,111 @@ input[type="email"]{
 
 .modal_hidden{
     display: none;
+}
+
+.modal_close_bar :hover{
+
+    color: red;
+}   
+
+.fcbk_login{
+    width: 100%;
+    padding: 1em;
+    color: white;
+    background-color: rgb(66,103,178);
+    font-size: 1em;
+    font-family: 'Playfair Display'
+}
+
+.google_login{
+    width: 100%;
+    padding: 1em;
+    color: black;
+    background-color: whitesmoke;
+    font-size: 1em;
+    margin: 0.5em 0em;
+    font-family: 'Playfair Display'
+}
+
+.fcbk_login:hover{
+    background-color: blue;
+    cursor: pointer;    
+}
+
+.google_login:hover{
+    background-color: lightyellow;
+    cursor: pointer;    
+}
+
+.or{
+   text-align: center;
+   margin-bottom: 1em;
+}
+
+.login_btn{
+    width: 100%;
+    margin-top: 1em;
+    padding: 1em;
+    font-family: 'Playfair Display';
+    background-color: #FF5A5F;
+    font-weight: bold;
+    color:whitesmoke;
+}
+
+.login_btn:hover{
+    background-color: rgb(255, 51, 57);
+    cursor: pointer;
+}
+
+.rmbr_me_chkbx{
+    background-color: rgb(66,103,178);
+    display: inline-block;
+    margin-top: 2em;
+}
+
+.rmbr_me{
+    display: inline-block;
+}
+
+.rmbr_me_chkbx{
+    cursor: pointer;
+}
+
+.frgt_pass{
+    display: block;
+    text-align: center;
+    margin: 1em 0em;
+    font-size: 0.9em;
+    color: #0E8B8F;
+    font-weight: bold;
+}
+
+.frgt_pass:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* .show_pass{
+    padding-left: 10em;
+    padding-right: 0em;
+} */
+
+.pass{
+    display: block;
+    
+}
+
+.signup_message{
+    margin-top: 1em;
+}
+
+.sign_up{
+    padding-left: 0.2em;
+    text-decoration: none;
+    color:#0E8B8F;
+    font-weight: bold;
+}
+
+.sign_up:hover{
+    text-decoration: underline;
 }
