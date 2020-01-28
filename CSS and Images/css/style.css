@@ -94,10 +94,12 @@ nav{
     margin: 2em 2em;
     max-width: 30em;
     border-radius: 1em;
+    background-color: seashell;
 }
 
 .booking_form_article{
     margin: 2em;
+
 }
 
 .container{
@@ -155,7 +157,6 @@ nav{
     
 } */
 
-
 /*************MODAL POPUP ******************/
 
 .modal{
@@ -172,7 +173,6 @@ nav{
 .modal__contents{
         background-color: white;
         padding:2rem 4rem;
-        
 }
 
 input[type="email"]{
@@ -287,9 +287,10 @@ input[type="password"]{
     padding-right: 0em;
 } */
 
-.pass{
+.email,.pass{
+    font-size: 1em;
+    font-family: 'Playfair-display';
     display: block;
-    
 }
 
 .signup_message{
@@ -305,4 +306,18 @@ input[type="password"]{
 
 .sign_up:hover{
     text-decoration: underline;
+}
+
+.check_in_input,.check_out_input{
+    width: 91%;
+    padding:0.5em;
+    font-size: 0.9em;
+    font-family: 'Playfair-display';
+}
+
+#destination,.guest_menu{
+    width: 100%;
+    padding:0.5em;
+    font-size: 1em;
+    font-family: 'Playfair-display';
 }
