@@ -23,102 +23,128 @@
         </div>
       </div>
       <a href="#">Room Listing</a>
-      <a href="#">User Registration</a>
+      <a href="#" class="user_registration">User Registration</a>
       <a href="#">Help</a>
       <a href="#" class="user_login">Login <i class="fas fa-user-circle"></i></a>
     </nav>
    
   </header>
 
-<article class="main-area">
+  <article class="main-area">
 
-  <div class="booking-form">
-    <article class="booking_form_article">
+    <div class="booking-form">
+      <article class="booking_form_article">
 
-     <div class="tagline-div"> 
-     
-       <h2>Book Unique Places to stay and things to do.</h2>
+       <div class="tagline-div"> 
+       
+         <h2>Book Unique Places to stay and things to do.</h2>
 
-       <h3>WHERE</h3>
-       <select name="destination" id="destination">
-         <option value="Ontario">Ontario</option>
-         <option value="British Columbia">British Columbia</option>
-         <option value="Saskatchewan">Saskatchewan</option>
-         <option value="Nova Scotia">Nova Scotia</option>
-         <option value="Alberta">Alberta</option>
-       </select>
+         <h3>WHERE</h3>
+         <select name="destination" id="destination">
+           <option value="Ontario">Ontario</option>
+           <option value="British Columbia">British Columbia</option>
+           <option value="Saskatchewan">Saskatchewan</option>
+           <option value="Nova Scotia">Nova Scotia</option>
+           <option value="Alberta">Alberta</option>
+         </select>
 
-     </div>
+       </div>
 
-      <div class="container">
+        <div class="container">
 
-        <div class="check_in_div">
-        <h3 class="check_in">CHECK-IN</h3>
-        <input type="date" name="check-in" class="check_in_input">
+          <div class="check_in_div">
+          <h3 class="check_in">CHECK-IN</h3>
+          <input type="date" name="check-in" class="check_in_input">
+          </div>
+
+          <div class="check_out_div">
+          <h3 class="check_out">CHECK OUT</h3>
+          <input type="date" name="check-out" class="check_out_input">
+          </div>
+
+        </div>  
+
+        <div class="guests_div">
+        <h3>GUESTS</h3>
+         <select name="guests_menu"  class="guest_menu" aria-placeholder="1 Guest">
+           <option value="Children">Children (Under 14)</option>
+           <option value="Adult">Adult(14+)</option>
+           <option value="Senior">Senior(60+)</option>
+        </select>  
+
+        <input type="button" value="SUBMIT" class="submit_btn">
+
         </div>
 
-        <div class="check_out_div">
-        <h3 class="check_out">CHECK OUT</h3>
-        <input type="date" name="check-out" class="check_out_input">
-        </div>
+      </article>
 
-      </div>  
-
-      <div class="guests_div">
-      <h3>GUESTS</h3>
-       <select name="guests_menu"  class="guest_menu" aria-placeholder="1 Guest">
-         <option value="Children">Children (Under 14)</option>
-         <option value="Adult">Adult(14+)</option>
-         <option value="Senior">Senior(60+)</option>
-      </select>  
-
-      <input type="button" value="SUBMIT" class="submit_btn">
-
-      </div>
-
-    </article>
-
-  </div>
-
-</article>
-
-<div class="modal modal_hidden">
-  <div class="modal__contents">
-    <div class="modal_close_bar">      
-      <h2><i class="far fa-window-close"></i></h2>
     </div>
-    <form id="learn_more">
-      <button class="fcbk_login"><i class="fab fa-facebook-f"></i> &nbsp; Login with Facebook</button>
-      <button class="google_login"><i class="fab fa-google-plus-g"> </i>&nbsp; Login with Google Plus</button>
-      
-      <p class="or">or</p>
-      
-      <input type="email" placeholder="Email Address" class="email">
-      <input type="password" placeholder="Password" class="pass">
-      <input type="checkbox" class="rmbr_me_chkbx"> <p class="rmbr_me">Remember Me</p> 
-      {{!-- <a class="show_pass">Show Password</a> --}}
-      <button class="login_btn">LOG IN</button>
-      <a class="frgt_pass">Forgot Password?</a>
-      <hr>
-      <p class="signup_message">Don't Have an account? <a href="#" class="sign_up">Sign Up</a></p>
-    </form>
+
+  </article>
+
+  <div class="modal modal_hidden">
+    <div class="modal__contents">
+      <div class="modal_close_bar">      
+        <h2><i class="far fa-window-close"></i></h2>
+      </div>
+      <form id="learn_more">
+        <button class="fcbk_login"><i class="fab fa-facebook-f"></i> &nbsp; Login with Facebook</button>
+        <button class="google_login"><i class="fab fa-google-plus-g"> </i>&nbsp; Login with Google Plus</button>
+
+        <p class="or">or</p>
+
+        <input type="email" placeholder="Email Address" class="email">
+        <input type="password" placeholder="Password" class="pass">
+        <input type="checkbox" class="rmbr_me_chkbx"> <p class="rmbr_me">Remember Me</p> 
+        {{!-- <a class="show_pass">Show Password</a> --}}
+        <button class="login_btn">LOG IN</button>
+        <a class="frgt_pass">Forgot Password?</a>
+        <hr>
+        <p class="signup_message">Don't Have an account? <a href="#" class="sign_up">Sign Up</a></p>
+      </form>
+    </div>
+
   </div>
-</div>
 
-<script type="text/javascript">
-   const toggleModal= () =>{
-     document.querySelector('.modal').classList.toggle('modal_hidden');
- }
+  <div class="usr_rg usr_rg_hddn">
+    <div class="usr_rg_cntnts">
+      <div class="modal_close_bar">      
+        <h2><i class="far fa-window-close"></i></h2>
+      </div>
+      <form id="usr_rg_frm"></form>
+        <p>Sign Up with <a href="#" class="fb_usr_frm"> Facebook </a> or  <a href="#" class="ggl_usr_frm">Google Plus </a> </p> <p class="or">or</p>
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+        <input type="password" placeholder="Create a Password"> 
+        <input type="Email" placeholder="Enter your best email address">
+    </div>
+  </div>
 
- document.querySelector(".user_login").addEventListener('click',toggleModal);
 
- document.querySelector('#learn_more').addEventListener('submit',(event)=>{
-     event.preventDefault();
-     toggleModal();
- })
- document.querySelector(".modal_close_bar").addEventListener('click', toggleModal)
+  <script type="text/javascript">
+     const toggleModal= () =>{
+       document.querySelector('.modal').classList.toggle('modal_hidden');
+   }
 
-</script>
+   document.querySelector(".user_login").addEventListener('click',toggleModal);
+
+   document.querySelector('#learn_more').addEventListener('submit',(event)=>{
+       event.preventDefault();
+       toggleModal();
+   })
+   document.querySelector(".modal_close_bar").addEventListener('click', toggleModal);
+
+//User registration modal pop up
+
+   const toggleUserRegModal = () =>{
+     document.querySelector('.usr_rg').classList.toggle('usr_rg_hddn');
+   }
+
+   document.querySelector('.user_registration').addEventListener('click', toggleUserRegModal);
+
+   document.querySelector(".modal_close_bar").addEventListener('click', toggleUserRegModal);
+
+  </script>
 
 </body>
 </html>

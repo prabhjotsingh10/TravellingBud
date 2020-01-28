@@ -186,6 +186,11 @@ input[type="password"]{
     padding: 1em;
 }
 
+input[type="text"]{
+    display: block;
+    width: auto;
+    padding: 1em;
+}
 
 .modal_close_bar{
     display: flex;
@@ -320,4 +325,35 @@ input[type="password"]{
     padding:0.5em;
     font-size: 1em;
     font-family: 'Playfair-display';
+}
+
+/*************USER REGISTRATION MODAL POP UP **************************/
+
+.usr_rg{
+    background-color: rgb(0, 0,0,0.8);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.usr_rg_cntnts{
+    background-color: white;
+    padding: 2em 4em;
+}
+
+.fb_usr_frm, .ggl_usr_frm{
+    color: #0E8B8F;
+    text-decoration: none;
+}
+
+.fb_usr_frm:hover, .ggl_usr_frm:hover{
+    text-decoration: underline;
+}
+
+.usr_rg_hddn{
+    display: none;
 }
