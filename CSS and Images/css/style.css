@@ -201,6 +201,19 @@ input[type="text"]{
     margin-bottom: 1em;
 }
 
+.modal_close_bar_new{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -2rem;
+    margin-top: -1rem;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+.modal_close_bar_new:hover{
+    color: red;
+}
+
 .modal_hidden{
     display: none;
 }

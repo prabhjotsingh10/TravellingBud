@@ -108,7 +108,7 @@
 
   <div class="usr_rg usr_rg_hddn">
     <div class="usr_rg_cntnts">
-      <div class="modal_close_bar">      
+      <div class="modal_close_bar_new">      
         <h2><i class="far fa-window-close"></i></h2>
       </div>
       <form id="usr_rg_frm"></form>
@@ -142,7 +142,27 @@
 
    document.querySelector('.user_registration').addEventListener('click', toggleUserRegModal);
 
-   document.querySelector(".modal_close_bar").addEventListener('click', toggleUserRegModal);
+   document.querySelector(".modal_close_bar_new").addEventListener('click', toggleUserRegModal);
+
+//Form Validations
+//Validating Login Form
+
+const login_validation= () =>{
+  let x, message;
+
+  x = document.getElementsByClassName('email').value;
+
+  if(x == ''){
+
+    message = "Email cannot be left blank";
+    document.getElementsByClassName('email').value = message;
+
+  }
+
+
+}
+
+login_validation();
 
   </script>
 
