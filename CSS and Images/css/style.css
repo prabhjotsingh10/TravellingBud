@@ -19,6 +19,13 @@ nav{
     flex-wrap: wrap;
 }
 
+
+body{
+    margin-top: 0em;
+    background-image: url("../images/hotel.jpg");
+    background-size: cover;
+}
+
 .dropdown{
     overflow: hidden;
 }
@@ -207,7 +214,7 @@ input[type="text"]{
     margin-right: -2rem;
     margin-top: -1rem;
     cursor: pointer;
-    margin-bottom: 1em;
+    margin-bottom: 0em;
 }
 
 .modal_close_bar_new:hover{
@@ -356,6 +363,7 @@ input[type="text"]{
 .usr_rg_cntnts{
     background-color: white;
     padding: 2em 4em;
+    max-width: 35em;
 }
 
 .fb_usr_frm, .ggl_usr_frm{
@@ -369,4 +377,67 @@ input[type="text"]{
 
 .usr_rg_hddn{
     display: none;
+}
+
+#emailError, #passwordError{
+    margin: 1em 0em;
+    color: red;
+    font-size: 0.8em;
+}
+
+.frst_nme, .lst_nme{
+    width: 93%;
+    padding: 1em;
+    margin:1em 0em;
+    font-family: 'Playfair Display';
+}
+
+.psswrd, .usr_rg_eml{
+    margin: 0.8em 0em;
+    font-family: 'Playfair Display';
+}
+
+.sgn_up_mssg{
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    font-family: 'Playfair Display';
+}
+
+.brthdy{
+    width: 93%;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+.brthdy_mssg{
+    font-size: 1em;
+    margin: 0.6em 0em;
+    line-height: 1.4em;
+}
+
+.sign_up_btn{
+    display: block;
+    width: 50%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+    font-family: 'Playfair Display';
+    background-color: #FF5A5F;
+    font-weight: bold;
+    color:whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login_message{
+    margin-top: 1em;
+}
+
+.login_link{
+    color: #0E8B8F;
+}
+
+.login_link :hover{
+    text-decoration: underline;
 }

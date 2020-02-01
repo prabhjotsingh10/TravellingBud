@@ -87,17 +87,19 @@
       <div class="modal_close_bar">      
         <h2><i class="far fa-window-close"></i></h2>
       </div>
-      <form id="learn_more">
+      <form id="learn_more" action="">
         <button class="fcbk_login"><i class="fab fa-facebook-f"></i> &nbsp; Login with Facebook</button>
         <button class="google_login"><i class="fab fa-google-plus-g"> </i>&nbsp; Login with Google Plus</button>
 
         <p class="or">or</p>
 
-        <input type="email" placeholder="Email Address" class="email">
-        <input type="password" placeholder="Password" class="pass">
+        <input type="email" placeholder="Email Address" class="email" id="email">
+        <div id="emailError"></div>
+        <input type="password" placeholder="Password" class="pass" id="pass">
+        <div id="passwordError"></div>
         <input type="checkbox" class="rmbr_me_chkbx"> <p class="rmbr_me">Remember Me</p> 
         {{!-- <a class="show_pass">Show Password</a> --}}
-        <button class="login_btn">LOG IN</button>
+        <button class="login_btn" type="button" onclick="login_validation()">LOG IN</button>
         <a class="frgt_pass">Forgot Password?</a>
         <hr>
         <p class="signup_message">Don't Have an account? <a href="#" class="sign_up">Sign Up</a></p>
@@ -112,11 +114,17 @@
         <h2><i class="far fa-window-close"></i></h2>
       </div>
       <form id="usr_rg_frm"></form>
-        <p>Sign Up with <a href="#" class="fb_usr_frm"> Facebook </a> or  <a href="#" class="ggl_usr_frm">Google Plus </a> </p> <p class="or">or</p>
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="password" placeholder="Create a Password"> 
-        <input type="Email" placeholder="Enter your best email address">
+        <p class="sgn_up_mssg">Sign Up with <a href="#" class="fb_usr_frm"> Facebook </a> or  <a href="#" class="ggl_usr_frm">Google Plus </a> </p> <p class="or">or</p>
+        <input type="name" placeholder="First Name" class="frst_nme">
+        <input type="name" placeholder="Last Name" class="lst_nme">
+        <input type="password" placeholder="Create a Password" class="psswrd"> 
+        <input type="Email" placeholder="Enter your best email address" class="usr_rg_eml">
+        <label for=""><h4>Birthday</h4> </label>
+        <p class="brthdy_mssg">To sign up, you need to be at least 18. Other people who use this website won't be able to see your birthday.</p>
+        <input type="date" min="1950-01-01" max="2002-01-01" class="brthdy">
+        <button class="sign_up_btn" type="button" >SIGN UP</button>
+        <hr>
+        <p class="login_message">Already have an account? <a class="login_link" > Log in </a></p>
     </div>
   </div>
 
@@ -148,21 +156,31 @@
 //Validating Login Form
 
 const login_validation= () =>{
-  let x, message;
+  
+  let email=document.getElementById('email');
+  let pass=document.getElementById('pass');
 
-  x = document.getElementsByClassName('email').value;
-
-  if(x == ''){
-
-    message = "Email cannot be left blank";
-    document.getElementsByClassName('email').value = message;
-
+  if(email.value =='')
+  {
+    document.getElementById('emailError').innerHTML = "<sup> * </sup>Email Cannot be left blank";
   }
 
+   if(pass.value =='')
+  {
+    document.getElementById('passwordError').innerHTML = "<sup> * </sup>Password Cannot be left blank";
+  }
+
+  if(pass.value.length <= 6){
+    document.getElementById('passwordError').innerHTML = "<sup> * </sup>Password Cannot be less than 6 letters";
+  }
 
 }
 
-login_validation();
+
+//const noEmailErrorMessage = () =>{ document.getElementById('emailError').style.display = "none";}
+
+//const noPasswordErrorMessage = () =>{  document.getElementById('passwordError').style.display = "none";}
+
 
   </script>
 
