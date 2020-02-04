@@ -104,11 +104,13 @@ nav{
 /******************* BOOKING FORM **********************/
 
 .booking-form{
-    border: 1px solid red;
+    border: 1px solid black;
     margin: 2em 2em;
     max-width: 30em;
     border-radius: 1em;
-    background-color: seashell;
+    background-color: white;
+    color: black;
+
 }
 
 .booking_form_article{
@@ -493,9 +495,39 @@ input[type="text"]{
 }
 
 .places_to_stay{
-    margin: 5em 3em;
+    margin: 2em 3em;
 }
 
 .places_to_stay p{
     margin-top: 1em;
-    }
+}
+
+.places_to_stay_image{
+   margin: 1em 3em;
+   height: 35em;
+   width: 90em;
+   background-image: url('../images/places-to-stay-image.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   text-align: center;
+}
+
+.places_to_stay_image button{
+   margin-top: 20em;
+   text-decoration: none;
+   padding: 1.2em 3em;
+   font-family: 'Playfair Display';
+   border:1.5px solid whitesmoke; 
+   background-color: transparent;
+   color: whitesmoke;
+   cursor: pointer;
+   font-size: 1em;
+   border-radius: 0.5em;
+}
+
+.places_to_stay_image button:hover{
+    background-color: whitesmoke;
+    color: black;
+    transition: ease-in 0.4s ;
+
+}
