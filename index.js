@@ -15,6 +15,14 @@ app.get('/',(req,res) =>{
     })
 })
 
+app.get("/registration", (req,res) => {
+
+    res.render("registration", {
+        title:"Room"
+    });
+
+})
+
 app.listen(4000, () => {
     console.log("The server is up and running");
 })

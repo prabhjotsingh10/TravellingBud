@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 
+
 *{
     margin:0;
     padding: 0;
@@ -13,18 +14,24 @@ nav{
     display: flex;
     place-content: space-evenly;
     list-style-type: none;
-    background-color: #FF5A5F;
+    background-color: transparent;
     height: 6em;
     align-items: center;
     flex-wrap: wrap;
 }
 
-
-body{
+.background{
     margin-top: 0em;
-    background-image: url("../images/hotel.jpg");
+    background-image: url("../images/back3.jpg");
     background-size: cover;
+    padding-bottom: 8em;
+    
 }
+
+ .main-area{
+    margin-left: 2em;
+    margin-top: 5em;    
+} 
 
 .dropdown{
     overflow: hidden;
@@ -41,7 +48,7 @@ body{
 }
 
 .dropdown .dropbtn{
-    background-color:#FF5A5F ;
+    background-color:transparent ;
     text-decoration: none;
     border: none;
     color: whitesmoke;
@@ -441,3 +448,54 @@ input[type="text"]{
 .login_link :hover{
     text-decoration: underline;
 }
+
+.card{
+    width: 40%;
+}
+
+.description{
+    padding: 2px 16px;
+}
+
+/************** Promotional Content *****************/
+
+.explore{
+    margin: 3em 3em;;
+}
+
+.explore_tagline{
+    margin-bottom: 1em;
+}
+
+.stays_adv_exp_parent_div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin: 0em 3em;
+}
+
+.stays_div, .adv_div,.exp_div{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 0.5em;
+    height: 6em;
+}
+
+.stays_div:hover, .adv_div:hover,.exp_div:hover{
+    box-shadow: 5px 10px 5px lightgray;
+    transition: ease-in-out 0.4s;
+    cursor: pointer;
+}
+
+.stays_message h2, .adv_message h2, .exp_message h2{
+    margin-top: 1.5em;
+}
+
+.places_to_stay{
+    margin: 5em 3em;
+}
+
+.places_to_stay p{
+    margin-top: 1em;
+    }
