@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script src="https://kit.fontawesome.com/d8743a4f35.js" crossorigin="anonymous"></script>
-    <title>TravellingBud</title>
+    <title>{{title}}</title>
 </head>
 
 <body>
+ <article class="background">
 
-<article class="background">
 
   <header id="first-header">
 
       <nav aria-label="Primary" class="header">
-        <a href="index.html" class="logo"><img src="img/Logo-new.svg" style="width: 5em; height: 4em;" alt="HTML Logo (replace this)"></a> 
-        <a href="#">Home</a>
+        <a href="/home" class="logo"><img src="/images/Logo.svg" style="width: 5em; height: 4em;" alt="HTML Logo (replace this)"></a> 
+        <a href="/home">Home</a>
         <div class="dropdown">
           <button class="dropbtn">Travelling Services <i class="fas fa-caret-down"></i></button>
           <div class="dropdown-content">
@@ -34,73 +34,26 @@
 
     </header>
 
-  <article class="main-area">
-
-    <div class="booking-form">
-      <article class="booking_form_article">
-
-       <div class="tagline-div"> 
-       
-         <h2>Book Unique Places to stay and things to do.</h2>
-
-         <h3>WHERE</h3>
-         <select name="destination" id="destination">
-           <option value="Ontario">Ontario</option>
-           <option value="British Columbia">British Columbia</option>
-           <option value="Saskatchewan">Saskatchewan</option>
-           <option value="Nova Scotia">Nova Scotia</option>
-           <option value="Alberta">Alberta</option>
-         </select>
-
-       </div>
-
-        <div class="container">
-
-          <div class="check_in_div">
-          <h3 class="check_in">CHECK-IN</h3>
-          <input type="date" name="check-in" class="check_in_input">
-          </div>
-
-          <div class="check_out_div">
-          <h3 class="check_out">CHECK OUT</h3>
-          <input type="date" name="check-out" class="check_out_input">
-          </div>
-
-        </div>  
-
-        <div class="guests_div">
-        <h3>GUESTS</h3>
-         <select name="guests_menu"  class="guest_menu" aria-placeholder="1 Guest">
-           <option value="Children">Children (Under 14)</option>
-           <option value="Adult">Adult(14+)</option>
-           <option value="Senior">Senior(60+)</option>
-        </select>  
-
-        <input type="button" value="SUBMIT" class="submit_btn">
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </article>
 </article>
+
+<section>
+  {{{body}}}
+</section>
 
   <div class="modal modal_hidden">
     <div class="modal__contents">
       <div class="modal_close_bar">      
         <h2><i class="far fa-window-close"></i></h2>
       </div>
-      <form id="learn_more" action="">
+      <form id="learn_more" action="/validation">
         <button class="fcbk_login"><i class="fab fa-facebook-f"></i> &nbsp; Login with Facebook</button>
         <button class="google_login"><i class="fab fa-google-plus-g"> </i>&nbsp; Login with Google Plus</button>
 
         <p class="or">or</p>
 
-        <input type="email" placeholder="Email Address" class="email" id="email">
+        <input type="email" placeholder="Email Address" class="email" id="email" name="email">
         <div id="emailError"></div>
-        <input type="password" placeholder="Password" class="pass" id="pass">
+        <input type="password" placeholder="Password" class="pass" id="pass" name="pass">
         <div id="passwordError"></div>
         <input type="checkbox" class="rmbr_me_chkbx"> <p class="rmbr_me">Remember Me</p> 
         {{!-- <a class="show_pass">Show Password</a> --}}
@@ -118,7 +71,7 @@
       <div class="modal_close_bar_new">      
         <h2><i class="far fa-window-close"></i></h2>
       </div>
-      <form id="usr_rg_frm"></form>
+      <form id="usr_rg_frm">
         <p class="sgn_up_mssg">Sign Up with <a href="#" class="fb_usr_frm"> Facebook </a> or  <a href="#" class="ggl_usr_frm">Google Plus </a> </p> <p class="or">or</p>
         <input type="name" placeholder="First Name" class="frst_nme">
         <input type="name" placeholder="Last Name" class="lst_nme">
@@ -130,72 +83,9 @@
         <button class="sign_up_btn" type="button" >SIGN UP</button>
         <hr>
         <p class="login_message">Already have an account? <a class="login_link" > Log in </a></p>
+        </form>
     </div>
   </div>
-
-<section class="promotional_content_section">
-
-  <div class="explore">
-    <h2 class="explore_tagline">
-      Explore TravellingBud.
-    </h2>
-    
-    <p class="explore_message">Click to learn more about more exclusive offers for your next trip.</p>
-  </div>
-
-  <div class="stays_adv_exp_parent_div">
-      
-      <div class="stays_div">
-      
-        <div class="stays_img">
-          <img src="/images/stays_back.jpg" style="width: 55% ; height:100%;border-radius: 0.2em" alt="">
-        </div>
-
-        <div class="stays_message">
-          <h2>Stays</h2>
-        </div>
-
-      </div>
-
-      <div class="adv_div">
-        
-        <div class="adv_img">
-          <img src="/images/adv_img.jpg" style=" width:50%; height:100%; border-radius: 0.2em" alt="">
-        </div>
-
-        <div class="adv_message">
-          <h2>Adventures</h2>
-        </div>
-
-      </div>
-
-      <div class="exp_div">
-        <div class="exp_img">
-          <img src="/images/exp_img.jpg" alt="" style="width:55%; height:100%; border-radius: 0.2em">
-        </div>
-
-        <div class="exp_message">
-
-          <h2>Experiences</h2>
-
-        </div>
-    
-      </div>
-  </div>
-
-  <div class="places_to_stay">
-    <h2>TravellingBud Places to Stay and Explore</h2>
-    <p>Explore a selection of places picked from around the world to give you the best experience. Verified for quality and design. </p>
-  </div>  
-
-  <div class="places_to_stay_image">
-    <button class="">Learn More</button>
-  </div>
-
-  </article>
-
-</section>
-
 
   <script type="text/javascript">
      const toggleModal= () =>{
@@ -243,8 +133,6 @@ const login_validation= () =>{
   //}
 
 }
-
-
 //const noEmailErrorMessage = () =>{ document.getElementById('emailError').style.display = "none";}
 
 //const noPasswordErrorMessage = () =>{  document.getElementById('passwordError').style.display = "none";}

@@ -22,15 +22,21 @@ nav{
 
 .background{
     margin-top: 0em;
-    background-image: url("../images/back3.jpg");
+    background-color: #42378f;
+    background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+
+}
+
+.background-home{
+    margin-top: 0em;
+    background-image: url("../images/backnew2.jpg");
     background-size: cover;
-    padding-bottom: 8em;
-    
+    padding-bottom:9em ;
 }
 
  .main-area{
     margin-left: 2em;
-    margin-top: 5em;    
+    padding-top: 5em;    
 } 
 
 .dropdown{
@@ -105,7 +111,7 @@ nav{
 
 .booking-form{
     border: 1px solid black;
-    margin: 2em 2em;
+    margin: 0em 2em;
     max-width: 30em;
     border-radius: 1em;
     background-color: white;
@@ -373,6 +379,7 @@ input[type="text"]{
     background-color: white;
     padding: 2em 4em;
     max-width: 35em;
+    
 }
 
 .fb_usr_frm, .ggl_usr_frm{
@@ -437,6 +444,7 @@ input[type="text"]{
     color:whitesmoke;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 
 .login_message{
@@ -495,7 +503,9 @@ input[type="text"]{
 }
 
 .places_to_stay{
-    margin: 2em 3em;
+    margin-top: 4em; 
+    margin-left: 3em;
+    
 }
 
 .places_to_stay p{
@@ -503,7 +513,7 @@ input[type="text"]{
 }
 
 .places_to_stay_image{
-   margin: 1em 3em;
+   margin: 2em 3em;
    height: 35em;
    width: 90em;
    background-image: url('../images/places-to-stay-image.jpg');
@@ -528,6 +538,12 @@ input[type="text"]{
 .places_to_stay_image button:hover{
     background-color: whitesmoke;
     color: black;
-    transition: ease-in 0.4s ;
-
+    transition: ease-in 0.3s ;   
 }
+
+.room_listing_heading{
+    margin: 1em 0em;
+    text-align: center;
+}
+
+
