@@ -16,6 +16,9 @@
   <header id="first-header">
 
       <nav aria-label="Primary" class="header">
+        <span class="menu">
+          
+        </span>
         <a href="/home" class="logo"><img src="/images/Logo.svg" style="width: 5em; height: 4em;" alt="HTML Logo (replace this)"></a> 
         <a href="/home">Home</a>
         <div class="dropdown">
@@ -27,9 +30,9 @@
           </div>
         </div>
         <a href="/registration">Room Listing</a>
-        <a href="#" class="user_registration">User Registration</a>
+        <a href="/sign_up" class="user_registration">User Registration</a>
         <a href="#">Help</a>
-        <a href="#" class="user_login">Login <i class="fas fa-user-circle"></i></a>
+        <a href="/login" id="user_login" class="user_login">Login <i class="fas fa-user-circle"></i></a>
       </nav>
 
     </header>
@@ -40,105 +43,43 @@
   {{{body}}}
 </section>
 
-  <div class="modal modal_hidden">
-    <div class="modal__contents">
-      <div class="modal_close_bar">      
-        <h2><i class="far fa-window-close"></i></h2>
-      </div>
-      <form id="learn_more" action="/validation">
-        <button class="fcbk_login"><i class="fab fa-facebook-f"></i> &nbsp; Login with Facebook</button>
-        <button class="google_login"><i class="fab fa-google-plus-g"> </i>&nbsp; Login with Google Plus</button>
-
-        <p class="or">or</p>
-
-        <input type="email" placeholder="Email Address" class="email" id="email" name="email">
-        <div id="emailError"></div>
-        <input type="password" placeholder="Password" class="pass" id="pass" name="pass">
-        <div id="passwordError"></div>
-        <input type="checkbox" class="rmbr_me_chkbx"> <p class="rmbr_me">Remember Me</p> 
-        {{!-- <a class="show_pass">Show Password</a> --}}
-        <button class="login_btn" type="button" onclick="login_validation()">LOG IN</button>
-        <a class="frgt_pass">Forgot Password?</a>
-        <hr>
-        <p class="signup_message">Don't Have an account? <a href="#" class="sign_up">Sign Up</a></p>
-      </form>
-    </div>
-
-  </div>
-
-  <div class="usr_rg usr_rg_hddn">
-    <div class="usr_rg_cntnts">
-      <div class="modal_close_bar_new">      
-        <h2><i class="far fa-window-close"></i></h2>
-      </div>
-      <form id="usr_rg_frm">
-        <p class="sgn_up_mssg">Sign Up with <a href="#" class="fb_usr_frm"> Facebook </a> or  <a href="#" class="ggl_usr_frm">Google Plus </a> </p> <p class="or">or</p>
-        <input type="name" placeholder="First Name" class="frst_nme">
-        <input type="name" placeholder="Last Name" class="lst_nme">
-        <input type="password" placeholder="Create a Password" class="psswrd"> 
-        <input type="Email" placeholder="Enter your best email address" class="usr_rg_eml">
-        <label for=""><h4>Birthday</h4> </label>
-        <p class="brthdy_mssg">To sign up, you need to be at least 18. Other people who use this website won't be able to see your birthday.</p>
-        <input type="date" min="1950-01-01" max="2002-01-01" class="brthdy">
-        <button class="sign_up_btn" type="button" >SIGN UP</button>
-        <hr>
-        <p class="login_message">Already have an account? <a class="login_link" > Log in </a></p>
-        </form>
-    </div>
-  </div>
-
-  <script type="text/javascript">
-     const toggleModal= () =>{
-       document.querySelector('.modal').classList.toggle('modal_hidden');
-   }
-
-   document.querySelector(".user_login").addEventListener('click',toggleModal);
-
-   document.querySelector('#learn_more').addEventListener('submit',(event)=>{
-       event.preventDefault();
-       toggleModal();
-   })
-   document.querySelector(".modal_close_bar").addEventListener('click', toggleModal);
-
-//User registration modal pop up
-
-   const toggleUserRegModal = () =>{
-     document.querySelector('.usr_rg').classList.toggle('usr_rg_hddn');
-   }
-
-   document.querySelector('.user_registration').addEventListener('click', toggleUserRegModal);
-
-   document.querySelector(".modal_close_bar_new").addEventListener('click', toggleUserRegModal);
-
-//Form Validations
-//Validating Login Form
-
-const login_validation= () =>{
-  
-  let email=document.getElementById('email');
-  let pass=document.getElementById('pass');
-
-  if(email.value =='')
-  {
-    document.getElementById('emailError').innerHTML = "<sup> * </sup>Email Cannot be left blank";
-  }
-
-   if(pass.value =='')
-  {
-    document.getElementById('passwordError').innerHTML = "<sup> * </sup>Password Cannot be left blank";
-  }
-
-  //if(pass.value.length <= 6){
-    //document.getElementById('passwordError').innerHTML = "<sup> * </sup>Password Cannot be less than 6 letters";
-  //}
-
-}
-//const noEmailErrorMessage = () =>{ document.getElementById('emailError').style.display = "none";}
-
-//const noPasswordErrorMessage = () =>{  document.getElementById('passwordError').style.display = "none";}
-
-
-  </script>
-
 </body>
+
+  <footer>
+   <div class="footer"> 
+    <div class="newsletter">
+      <h2>STAY CONNECTED</h2>
+      <p>Sign Up for our newsletter and be the first one to get updates & specials</p>
+      <input type="text" id="email_input" placeholder="Enter your email here"> 
+      <button type="submit" class="subscribe_button">Subscribe</button>
+    </div>
+
+    <nav aria-label="Legal">
+      <ul class="termsAndPolicies">
+        <li><a href="#">About</a></li>
+        <li><a href="#">News and Press</a></li>
+        <li><a href="#">Careers </a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Accessibility Policy </a></li>
+      </ul>
+    </nav>
+    <div class="icons">
+      <ul>
+        <h2>FOLLOW US ON SOCIAL MEDIA</h2>
+        <li><a href="#"><i class="fab fa-facebook-f" style="color: #3b5998;"></i> </a></li>
+        <li><a href="#"><i class="fab fa-instagram" style="color:  #f53844;"></i> </a></li>
+        <li><a href="#"><i class="fab fa-snapchat-ghost" style="color: #F0F23D;"></i> </a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i></i> </a></li>
+      </ul>
+     </div> 
+    </div>
+
+    <div class="copyrights">
+      <h3>&copy; Copyright 2020. All Rights Reserved.</h3>
+    </div>
+
+  </footer>
+
+
 </html>

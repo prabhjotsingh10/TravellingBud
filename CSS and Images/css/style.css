@@ -182,9 +182,7 @@ nav{
 /*************MODAL POPUP ******************/
 
 .modal{
-    background-color: rgb(0, 0,0,0.8);
-    position: absolute;
-    top: 0;
+    margin-top: 2em;
     height: 100%;
     width: 100%;
     display: flex;
@@ -195,6 +193,9 @@ nav{
 .modal__contents{
         background-color: white;
         padding:2rem 4rem;
+        width: 40%;
+        border: 1px solid lightgray;
+        margin-bottom: 2em;
 }
 
 input[type="email"]{
@@ -214,38 +215,8 @@ input[type="text"]{
     padding: 1em;
 }
 
-.modal_close_bar{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: -2rem;
-    margin-top: -1rem;
-    cursor: pointer;
-    margin-bottom: 1em;
-}
-
-.modal_close_bar_new{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: -2rem;
-    margin-top: -1rem;
-    cursor: pointer;
-    margin-bottom: 0em;
-}
-
-.modal_close_bar_new:hover{
-    color: red;
-}
-
-.modal_hidden{
-    display: none;
-}
-
-.modal_close_bar :hover{
-
-    color: red;
-}   
-
 .fcbk_login{
+    border-radius: 0.8em;
     width: 100%;
     padding: 1em;
     color: white;
@@ -255,6 +226,7 @@ input[type="text"]{
 }
 
 .google_login{
+    border-radius: 0.8em;
     width: 100%;
     padding: 1em;
     color: black;
@@ -365,9 +337,6 @@ input[type="text"]{
 /*************USER REGISTRATION MODAL POP UP **************************/
 
 .usr_rg{
-    background-color: rgb(0, 0,0,0.8);
-    position: absolute;
-    top: 0;
     height: 100%;
     width: 100%;
     display: flex;
@@ -379,7 +348,8 @@ input[type="text"]{
     background-color: white;
     padding: 2em 4em;
     max-width: 35em;
-    
+    border: 1px solid lightgray;
+    margin: 2em 0em;
 }
 
 .fb_usr_frm, .ggl_usr_frm{
@@ -447,6 +417,10 @@ input[type="text"]{
     cursor: pointer;
 }
 
+.sign_up_btn:hover{
+    background-color: #f53844;
+}
+
 .login_message{
     margin-top: 1em;
 }
@@ -455,22 +429,15 @@ input[type="text"]{
     color: #0E8B8F;
 }
 
-.login_link :hover{
+.login_link:hover{
+    cursor: pointer;
     text-decoration: underline;
-}
-
-.card{
-    width: 40%;
-}
-
-.description{
-    padding: 2px 16px;
 }
 
 /************** Promotional Content *****************/
 
 .explore{
-    margin: 3em 3em;;
+    margin: 3em 2em;;
 }
 
 .explore_tagline{
@@ -481,7 +448,7 @@ input[type="text"]{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1em;
-    margin: 0em 3em;
+    margin: 0em 2em;
 }
 
 .stays_div, .adv_div,.exp_div{
@@ -504,7 +471,7 @@ input[type="text"]{
 
 .places_to_stay{
     margin-top: 4em; 
-    margin-left: 3em;
+    margin-left: 2em;
     
 }
 
@@ -513,9 +480,10 @@ input[type="text"]{
 }
 
 .places_to_stay_image{
-   margin: 2em 3em;
+   margin: 1em 0em;
+   margin-left: 2em;
    height: 35em;
-   width: 90em;
+   max-width: 91em;
    background-image: url('../images/places-to-stay-image.jpg');
    background-size: cover;
    background-repeat: no-repeat;
@@ -546,4 +514,113 @@ input[type="text"]{
     text-align: center;
 }
 
+.errors{
+    color: red;
+}
 
+/*********************** FOOTER *******************************/
+
+.footer{
+    background-color: #F3F5F2;
+    /* margin-right: 2em;
+    margin-left: 3em; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1em;
+}
+
+.newsletter{
+    margin: 1em 2em;
+}
+
+.newsletter h2{
+    color: #1b42cb;
+}
+
+.newsletter p{
+    margin-top: 1em;
+    color:#1b42cb;
+}
+
+.subscribe_button{
+    display: inline-block;
+    margin-top: 1em;
+    margin-left: 1em;
+    padding:0.4em;
+    background-color: transparent;
+    border: 1px solid lightslategray;
+    border-radius: 0.2em;
+    color: #1b42cb;
+}
+
+.subscribe_button:hover{
+    cursor: pointer;
+    background-color: white;
+    transition: ease-in-out 0.3s;
+}
+
+#email_input{  /*because id's are more specific in this case, the class was getting overridden due to the line of code for all the input boxes as text */
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.4em;
+    min-width: 14em;
+    margin-top: 2em;
+}
+
+.icons{
+    margin-top: 1em;
+    text-align: center;
+}
+
+.icons ul h2{
+    margin-right: 1.1em;
+    color: #1b42cb;
+}
+
+.icons ul li{
+    font-size: 1.5em;
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 1.8em;
+    margin-left: 1em;
+    margin-top: 2em;
+}
+
+.icons ul li a i{
+    color: #0178fd;
+
+}
+
+.termsAndPolicies{
+    margin-top:6em;
+    text-decoration: none;
+
+}
+
+.termsAndPolicies li, .termsAndPolicies li a{
+    list-style-type: none;
+    margin-top:0.5em;
+    text-decoration:none;
+    font-weight: bold;
+    color:#1b42cb;
+}
+
+.termsAndPolicies li a:hover{
+    text-decoration: underline;
+}
+
+.copyrights{
+    margin: 0.5em ;
+    margin-left: 3em;
+    margin-right: 3em;
+    text-align: center;
+    padding: 1em;
+}
+
+/******************** BREAKPOINTS *******************************/
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    
+
+    }

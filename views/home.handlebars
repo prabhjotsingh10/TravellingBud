@@ -4,11 +4,13 @@
 
     <div class="booking-form">
       <article class="booking_form_article">
-
+      
        <div class="tagline-div"> 
-       
+        {{#each messages}}
+         <div class="errors">{{this}}</div>
+        {{/each}}   
          <h2>Book Unique Places to stay and things to do.</h2>
-
+        <form action="/validate-home" method="POST">
          <h3>WHERE</h3>
          <select name="destination" id="destination">
            <option value="Ontario">Ontario</option>
@@ -18,18 +20,18 @@
            <option value="Alberta">Alberta</option>
          </select>
 
-       </div>
+          </div>
 
-        <div class="container">
+          <div class="container">
 
           <div class="check_in_div">
           <h3 class="check_in">CHECK-IN</h3>
-          <input type="date" name="check-in" class="check_in_input">
+          <input type="date" name="check_in" class="check_in_input">
           </div>
 
           <div class="check_out_div">
           <h3 class="check_out">CHECK OUT</h3>
-          <input type="date" name="check-out" class="check_out_input">
+          <input type="date" name="check_out" class="check_out_input">
           </div>
 
         </div>  
@@ -42,8 +44,8 @@
            <option value="Senior">Senior(60+)</option>
         </select>  
 
-        <input type="button" value="SUBMIT" class="submit_btn">
-
+        <input type="submit" value="SUBMIT" class="submit_btn">
+       </form>
         </div>
 
       </article>
