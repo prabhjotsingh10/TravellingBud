@@ -7,26 +7,27 @@
 </head>
 
     <h1 class="room_listing_heading">{{heading}}</h1 >
-
     <div class="container">
+    {{#each rooms}}
         <div class="card">
-            <img src="images/pic1.jpg" alt="" style="width: 100%;">
+            <img src="{{this.image}}" alt="" style="width: 100%;">
             <div class="description">
-                <p>Entire House</p><i class="fas fa-star"> 4.3</i>
-                <h2>Newly Renovated Beautiful 2 Story House</h2>
+                <p>{{this.title}}</p><i class="fas fa-star"> {{this.rating}}</i>
+                <h2>{{this.description}}</h2>
+                <h4>Price Per Night: {{this.price}} $</h4>
             </div>   
         </div>
-    
+{{!--     
         <div class="card">
             <img src="images/pic2.jpg" alt="" style="width: 100%;">
             <div class="description">
-                <p>Entire Apartment</p> <i class="fas fa-star"> 3.0</i>
-                <h2>Cozy Downtown 4-Bed Suite close to CN Tower and Harbourfront</h2>
+                <p>{{this.title}}</p> <i class="fas fa-star"> 3.0</i>
+                <h2>{{this.description}}</h2>
             </div>
             
-        </div>
-
-        <div class="card">
+        </div> --}}
+    {{/each}}
+        {{!-- <div class="card">
             <img src="images/pic3.jpg" alt="" style="width: 100%;">
             <div class="description">
                 <p>Condo</p><i class="fas fa-star"> 4.8</i>
@@ -60,7 +61,7 @@
                 <h2>CN Tower 2BD Condo Prime Location</h2>
             </div>
            
-        </div>
+        </div> --}}
 
 
     </div>

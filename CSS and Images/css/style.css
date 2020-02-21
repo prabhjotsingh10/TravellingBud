@@ -11,8 +11,6 @@ html{
 }
 
 nav{
-    display: flex;
-    place-content: space-evenly;
     list-style-type: none;
     background-color: transparent;
     height: 6em;
@@ -20,11 +18,34 @@ nav{
     flex-wrap: wrap;
 }
 
+.logo{
+    display: inline;
+    position: absolute;
+    top: 2px;
+    left: 12px;
+    padding-top: 0.2em;
+}
+
+.menu_list{
+    display: flex;
+    place-content: space-evenly;
+    list-style-type:none ;
+    padding-top: 2em;
+    margin-left: 6em;
+}
+
+.menu_list li a{
+    margin-right: 1em;
+}
+
+.visible{
+    display: block;
+}
+
 .background{
     margin-top: 0em;
     background-color: #42378f;
     background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
-
 }
 
 .background-home{
@@ -39,68 +60,19 @@ nav{
     padding-top: 5em;    
 } 
 
-.dropdown{
-    overflow: hidden;
-}
-
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: lightgray;
-    min-width: 3rem;
-    color:black;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.dropdown .dropbtn{
-    background-color:transparent ;
-    text-decoration: none;
-    border: none;
-    color: whitesmoke;
-    font-size: 1em;
-    font-family: 'Playfair Display';
-}
-
 .logo{
     display: inline-block;
 }
 
-.header a, .dropdown{
+.header a{
     color: whitesmoke;
     transition: all 0.3s ease-in;
     font-size: 1.3rem
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-size: 0.8em;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: none;
-}
-
 .header a:hover{
     font-size: 1.1rem;
     color: gray;
-}
-
- .dropbtn:hover{
-    color: gray; 
-} 
-
-
-.dropdown-content a:hover{
-    background-color: #ddd;
 }
 
 .header a{
@@ -170,33 +142,7 @@ nav{
     margin-top: 1em;
 }
 
-/****************** BODY BACKGROUND *******************/
-/* 
-.main-area{
-    background-image: url('../images/Home Background.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    
-} */
-
-/*************MODAL POPUP ******************/
-
-.modal{
-    margin-top: 2em;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal__contents{
-        background-color: white;
-        padding:2rem 4rem;
-        width: 40%;
-        border: 1px solid lightgray;
-        margin-bottom: 2em;
-}
+/****************************LOGIN FORM ******************************/
 
 input[type="email"]{
     width: 93%;
@@ -251,6 +197,17 @@ input[type="text"]{
    margin-bottom: 1em;
 }
 
+.login_form{
+    display: flex;
+    justify-content: center;
+    margin: 2em 0em;
+}
+.login_form_cntnts{
+    max-width: 35em;
+    border: 1px solid lightgray;
+    padding: 2em 4em;
+} 
+
 .login_btn{
     width: 100%;
     margin-top: 1em;
@@ -294,11 +251,6 @@ input[type="text"]{
     cursor: pointer;
 }
 
-/* .show_pass{
-    padding-left: 10em;
-    padding-right: 0em;
-} */
-
 .email,.pass{
     font-size: 1em;
     font-family: 'Playfair-display';
@@ -320,6 +272,8 @@ input[type="text"]{
     text-decoration: underline;
 }
 
+/****************** HOME PAGE ************************/
+
 .check_in_input,.check_out_input{
     width: 91%;
     padding:0.5em;
@@ -334,14 +288,13 @@ input[type="text"]{
     font-family: 'Playfair-display';
 }
 
-/*************USER REGISTRATION MODAL POP UP **************************/
+/************************************* SIGN UP PAGE ************************************************/
 
 .usr_rg{
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .usr_rg_cntnts{
@@ -361,17 +314,20 @@ input[type="text"]{
     text-decoration: underline;
 }
 
-.usr_rg_hddn{
-    display: none;
-}
-
 #emailError, #passwordError{
     margin: 1em 0em;
     color: red;
     font-size: 0.8em;
 }
 
-.frst_nme, .lst_nme{
+.frst_nme, .lst_nme {
+    width: 93%;
+    padding: 1em;
+    margin:1em 0em;
+    font-family: 'Playfair Display';
+}
+
+#ph_No{
     width: 93%;
     padding: 1em;
     margin:1em 0em;
@@ -427,6 +383,7 @@ input[type="text"]{
 
 .login_link{
     color: #0E8B8F;
+    text-decoration: none;
 }
 
 .login_link:hover{
@@ -591,13 +548,13 @@ input[type="text"]{
 
 }
 
-.termsAndPolicies{
-    margin-top:6em;
+.termsAndConditions{
+    text-align: center;
     text-decoration: none;
 
 }
 
-.termsAndPolicies li, .termsAndPolicies li a{
+.termsAndConditions li, .termsAndConditions li a{
     list-style-type: none;
     margin-top:0.5em;
     text-decoration:none;
@@ -605,7 +562,7 @@ input[type="text"]{
     color:#1b42cb;
 }
 
-.termsAndPolicies li a:hover{
+.termsAndConditions li a:hover{
     text-decoration: underline;
 }
 
@@ -622,5 +579,252 @@ input[type="text"]{
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
     
+    .stays_adv_exp_parent_div{
+        display: inline-block;
+        margin:0em 2em;
+    }
+
+    .stays_div, .adv_div , .exp_div{
+        margin-top: 1em;
+    }
+
+    .footer {
+        background-color: #F3F5F2;
+        display: inline-block;
+        padding: 1em;
+    }
+
+    .newsletter{
+        text-align: center;
+        margin: 2em 2em;
+    }
+
+    .termsAndConditions{
+        margin-bottom: 2em;
+    }
+
+}
+
+/********************* IPHONE 5/5S/SE ******************************/
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) { 
+
+    .main-area {
+        margin-left: 0em;
+        padding-top: 5em;
+    }
+
+    .booking-form {
+        border: 1px solid black;
+        margin: 0em 0.5em;
+        max-width: 30em;
+        border-radius: 1em;
+        background-color: white;
+        color: black;
+    }
+    
+     .check_in_input, .check_out_input {
+        width: 50%;
+        padding: 0.5em;
+        font-size: 0.9em;
+        font-family: 'Playfair-display';
+    } 
+    
+    nav {
+        list-style-type: none;
+        background-color: transparent;
+        height: auto;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu_list {
+        display: block;
+        place-content: space-evenly;
+        list-style-type: none;
+        padding-top: 0em;
+        margin-left: 10em;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stays_adv_exp_parent_div {
+        display: inline-block;
+        margin: 0em 1em;
+    }
+}
+
+/******************* IPHONE 6/7/8 *****************************/
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+    .check_in_input, .check_out_input {
+        width: 76%;
+        padding: 0.5em;
+        font-size: 0.9em;
+        font-family: 'Playfair-display';
+    }
+
+    .menu_list {
+        display: block;
+        place-content: space-evenly;
+        list-style-type: none;
+        /* padding-top: 2em; */
+        margin-left: 10em;
+    }
+
+    .booking-form {
+        border: 1px solid black;
+        margin: 0em 1em;
+        max-width: 30em;
+        border-radius: 1em;
+        background-color: white;
+        color: black;
+    }
+
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {
+
+    .places_to_stay_image {
+        margin: 1em 1em;
+        /* margin-left: 2em; */
+        height: 35em;
+        max-width: 91em;
+        background-image: url(../images/places-to-stay-image.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+}
+
+/******************** IPHONE X ***********************/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {     
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+
+    .menu_list{
+        display: block;
+        padding-top:0em ;
+        margin-left: 10em;
+    }
+
+    .header{
+        height: 11em;
+    }
+
+    .main-area{
+        margin-left: 0em;
+    }
+
+    .booking-form {
+        border: 1px solid black;
+        margin-left: 0em;
+        margin: 0em 0.5em;
+        max-width: 25em;
+        border-radius: 1em;
+        background-color: white;
+        color: black;
+    }
+
+    .explore{
+        margin: 3em 1em;
+    }
+
+    .stays_adv_exp_parent_div{
+        display: inline-block;
+        margin: 0em 1em;
+    }
+
+    .places_to_stay{
+        margin-left: 1em;
+    }
+
+    .places_to_stay_image{
+        margin: 1em;
+        height: 35em;
+        max-width: 91em;
+        background-image: url(../images/places-to-stay-image.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .icons ul li {
+        font-size: 1.5em;
+        list-style-type: none;
+        display: inline-block;
+        margin-right: 1em;
+        margin-left: 1em;
+        margin-top: 2em;
+    }
+
+    .signup_message {
+        margin-top: 2em;
+        text-align: center;
+    }
+
+    .usr_rg_cntnts {
+        background-color: white;
+        padding: 2em 2em;
+        max-width: 35em;
+        /* border: 1px solid lightgray; */
+        /* margin: 2em 0em; */
+    }
+
+    .login_message {
+        margin-top: 2em;
+        text-align: center;
+    }
+
+    .icons ul li {
+        font-size: 1.5em;
+        list-style-type: none;
+        display: inline-block;
+        margin-right: 1em;
+        margin-left: 1em;
+        margin-top: 2em;
+    }
+
+    .check_in_input, .check_out_input {
+        width: 94%;
+        padding: 0.5em;
+        font-size: 0.9em;
+        font-family: 'Playfair-display';
+    }
+
+
+    .card {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 4em 0em;
+    }
+
+    .login_form_cntnts {
+        max-width: 35em;
+        border: 1px solid lightgray;
+        padding: 1em 2em;
+    }
 
     }
+
+
+    
+
+    

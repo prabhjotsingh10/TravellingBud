@@ -15,24 +15,17 @@
 
   <header id="first-header">
 
-      <nav aria-label="Primary" class="header">
-        <span class="menu">
-          <i class="fas fa-bars"></i>
-        </span>
-        <a href="/home" class="logo"><img src="/images/Logo.svg" style="width: 5em; height: 4em;" alt="HTML Logo (replace this)"></a> 
-        <a href="/home">Home</a>
-        <div class="dropdown">
-          <button class="dropbtn">Travelling Services <i class="fas fa-caret-down"></i></button>
-          <div class="dropdown-content">
-            <a href="#">International Flights</a>
-            <a href="#">Destinations </a>
-            <a href="#">Offers and Promotions </a>
-          </div>
-        </div>
-        <a href="/registration">Room Listing</a>
-        <a href="/sign_up" class="user_registration">User Registration</a>
-        <a href="#">Help</a>
-        <a href="/login" id="user_login" class="user_login">Login <i class="fas fa-user-circle"></i></a>
+      <nav class="header">
+        
+        <a href="/home" class="logo"><img src="/images/Logo.svg" style="width: 5em; height: 4em;" alt="Custom Logo"></a>
+        <ul class="menu_list">
+          <li><a href="/home">Home</a></li>
+          <li><a href="#" class="travelling_services">Travelling Services </a></li>
+          <li><a href="/registration">Room Listing</a></li>
+          <li><a href="/sign_up" class="user_registration">User Registration</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="/login" id="user_login" class="user_login">Login <i class="fas fa-user-circle"></i></a></li>
+        </ul>
       </nav>
 
     </header>
@@ -42,6 +35,10 @@
 <section>
   {{{body}}}
 </section>
+
+<script type="text/javascript">
+   
+</script>
 
 </body>
 
@@ -54,16 +51,16 @@
       <button type="submit" class="subscribe_button">Subscribe</button>
     </div>
 
-    <nav aria-label="Legal">
-      <ul class="termsAndPolicies">
+    <div>
+      <ul class="termsAndConditions">
         <li><a href="#">About</a></li>
         <li><a href="#">News and Press</a></li>
         <li><a href="#">Careers </a></li>
-        <li><a href="#">Terms of Use</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Accessibility Policy </a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">TravellingBud Privacy Policies </a></li>
       </ul>
-    </nav>
+    </div>
     <div class="icons">
       <ul>
         <h2>FOLLOW US ON SOCIAL MEDIA</h2>
@@ -80,6 +77,4 @@
     </div>
 
   </footer>
-
-
 </html>
